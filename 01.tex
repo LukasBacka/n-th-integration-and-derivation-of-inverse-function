@@ -1,0 +1,44 @@
+\subsection{Bürmann-Lagrange series}
+
+A power series which offers a complete solution 
+to the problem of local inversion of holomorphic 
+functions. In fact, let a function \(w=g(z)\) of 
+the complex variable z be regular in a neighbourhood 
+of the point \(z=a\), and let \(g(a)=b\) and 
+\(g^{′}(a)\neq0\). Then there exists a regular 
+function \(z=h(w)\) in some neighbourhood of the
+point w=b of the w- plane which is the inverse to 
+\(g(z)\) and is such that \(h(b)=a\). Moreover, if 
+\(f(z)\) is any regular function in a neighbourhood
+of the point z=a, then the composite function 
+\(F(w)=f[h(w)]\) can be expanded in a Bürmann–Lagrange
+series in a neighbourhood of the point \(w=b\)
+
+\begin{align}
+      F(w) &= f(a) + \\
+      &+\sum_{n\geq1} \frac{1}{n!} 
+      \{\frac{d^{n-1}}{dz^{n-1}}\left[ 
+      f^{′}(z) \left( \frac{z-a}{g(z) -
+      b}\right)^n\right]\}_{z=a} (w-b)^n.
+\label{huhu}
+\end{align}
+
+The inverse of the function \(w=g(z)\) is obtained
+by setting \(f(z)\equiv z\).
+
+\begin{theorem}
+      Let \(f, f(\omega) = z, \omega = g(z)\), and \(f^{'}(a) \neq 0\), then
+      
+      \begin{align}
+            g^{(k)}(z) = \frac{z^{-k}}{\Gamma(1-k)}a +
+            \sum_{n \geq 0} \frac{g_n}{\Gamma(n-k+1)}(z-f(a))^{n-k}
+      \end{align}
+      where
+      
+      \begin{align}
+            g_n = \lim_{\omega \to 0} \frac{d^{n-1}}{d\omega^{n-1}}
+            \left[ \left( \frac{\omega - a}{f(\omega) - f(a)}\right)^n\right]
+      \end{align}
+      
+      and \(\Gamma(-k+1) = z^{-k}a,\) for \(k > 0\).
+\end{theorem}
