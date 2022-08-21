@@ -1,0 +1,47 @@
+\subsection{Reformulation of the Bürmann-Lagrange series}
+
+\begin{align}
+        g(z) &= a + \sum_{n \geq 1} \frac{(z-f(a))^n}{n!}
+        \lim_{\omega \to a}\frac{d^{n-1}}{d\omega^{n-1}}
+        \left[ \left(\frac{\omega - a}{f(\omega) - f(a)} \right)^n\right] 
+\end{align}
+
+let substitute the limit
+
+\begin{align}
+        \Psi(a) &= \lim_{\omega \to a}\left[ (\omega-a)^n(f(\omega)
+        - f(a))^{-n}\right] \\
+        &= \lim_{\omega \to a}\sum_{k=0}^{n-1}\binom{n-1}{k}(\omega 
+        - a)^{k-1}(k)_{n-k-1}\left( (f(\omega) - f(a))^{-n}\right)^{(k)}\\
+\end{align}
+
+and
+
+\begin{align}
+        \Lambda(k, a)& = \left( (f(\omega) - f(a))^{-n}\right)^{(k)} \\
+        &= \sum_{\lambda = 0}^{\infty}\binom{-n}{\lambda}f(a)^\lambda
+        f(\omega)^{-n-k} \\
+\end{align}
+hence
+
+\begin{align}
+        \Psi(a) &= \lim_{\omega \to a}\sum_{k=0}^{n-1}\binom{n-1}{k}(\omega
+        - a)^{k-1}(k)_{n-k-1}\left( (f(\omega) - f(a))^{-n}\right)^{(k)}\\
+        &= \lim_{\omega \to a}\sum_{k=0}^{n-1}\binom{n-1}{k}(\omega -
+        a)^{k-1}(k)_{n-k-1}\sum_{\lambda = 0}^{\infty}\binom{-n}{
+        \lambda}f(a)^\lambda \left(f(\omega)^{-n-k}\right)^{(k)} \\
+        &= \sum_{k=0}^{n-1}\binom{n-1}{k}(k)_{n-k-1}\lim_{\omega 
+        \to a}(\omega -a)^{k-1}\sum_{\lambda = 0}^\infty \binom{-n
+        }{\lambda}\left( f(\omega)^{-n-\lambda}\right)^{(k)} \\
+        &= \sum_{k=0}^{n-1}\binom{n-1}{k}(k)_{n-k-1} \sum_{\lambda 
+        = 0}^{\infty}\binom{-n}{\lambda} \lim_{\omega \to a}\left[
+        \frac{(f(\omega)^{-n-\lambda})^{(k)}}{(\omega - a)^{1-k}}\right]
+\end{align}
+
+so we get the expression
+
+\begin{align}
+        g(z) = a+ \sum_{n=1}^{\infty} \frac{(z-f(a))^n}{n!}\sum_{k=0}^{n-1}
+        \binom{n-1}{k}(k)_{n-k-1}\sum_{\lambda=0}^\infty \binom{-n}{\lambda}
+        \lim_{\omega \to a}\left[ \frac{(f(\omega)^{-n-\lambda})^{(k)}}{(\omega - a)^{1-k}}\right]
+\end{align}
